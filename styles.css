@@ -38,6 +38,8 @@ h1 em,h2 em{font-style:italic}
 .mark::after{content:"";position:absolute;left:5px;right:5px;bottom:0;height:9px;border-radius:9px 9px 0 0;background:var(--blue)}
 .nav nav{display:flex;align-items:center;gap:30px;font-size:15px}
 .nav nav a:not(.btn){text-decoration:none;color:rgba(255,255,255,.78);transition:color .2s}
+.nav nav .navmail{font:500 13px var(--mono);letter-spacing:-.01em;color:#fff;padding:7px 12px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(255,255,255,.08)}
+.nav nav .navmail:hover{border-color:var(--lime);color:var(--lime)}
 .nav nav a:not(.btn):hover{color:#fff}
 
 .btn{display:inline-flex;align-items:center;gap:10px;background:var(--lime);color:var(--ink);font-weight:600;font-size:16px;padding:14px 24px;border-radius:999px;text-decoration:none;transition:transform .25s var(--ease),box-shadow .25s,background .2s;white-space:nowrap}
@@ -55,7 +57,10 @@ h1 em,h2 em{font-style:italic}
   radial-gradient(700px 400px at 0% 100%,rgba(11,9,48,.45),transparent 70%);pointer-events:none}
 .hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:72px 72px;-webkit-mask-image:linear-gradient(#000 0%,transparent 70%);mask-image:linear-gradient(#000 0%,transparent 70%);pointer-events:none}
 .hero .wrap{position:relative;z-index:1}
-.pill{display:inline-flex;align-items:center;gap:10px;font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:9px 14px 9px 12px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(255,255,255,.08);margin-bottom:34px}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
+.pill.claude{color:var(--lime);border-color:rgba(216,255,62,.4);background:rgba(216,255,62,.08)}
+.pill.claude svg{width:12px;height:12px}
+.pill{display:inline-flex;align-items:center;gap:10px;font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:9px 14px 9px 12px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(255,255,255,.08)}
 .pill i{width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 0 rgba(216,255,62,.6);animation:ping 2.4s infinite}
 @keyframes ping{70%{box-shadow:0 0 0 9px rgba(216,255,62,0)}100%{box-shadow:0 0 0 0 rgba(216,255,62,0)}}
 .hero h1{font-size:clamp(50px,8.6vw,124px);line-height:.94;letter-spacing:-.03em;max-width:15ch}
@@ -78,7 +83,8 @@ h1 em,h2 em{font-style:italic}
 .win .bar{display:flex;align-items:center;gap:14px;padding:13px 18px;background:#fff;border-bottom:1px solid var(--line)}
 .dots{display:flex;gap:7px}.dots i{width:11px;height:11px;border-radius:50%;background:#dcdbea}
 .win .bar .title{font:500 12.5px var(--mono);color:var(--muted);letter-spacing:.02em}
-.rec{margin-left:auto;display:inline-flex;align-items:center;gap:8px;font:600 11px var(--mono);letter-spacing:.1em;color:var(--coral)}
+.pw{margin-left:auto;font:500 11px var(--mono);letter-spacing:.06em;color:var(--blue);background:#eeedff;padding:5px 9px;border-radius:999px;text-transform:uppercase}
+.rec{display:inline-flex;align-items:center;gap:8px;font:600 11px var(--mono);letter-spacing:.1em;color:var(--coral)}
 .rec b{width:8px;height:8px;border-radius:50%;background:var(--coral);animation:blink 1.6s infinite}
 @keyframes blink{50%{opacity:.25}}
 .body{display:grid;grid-template-columns:262px minmax(0,1fr) 332px}
@@ -214,7 +220,9 @@ section{position:relative}
 .sgrid{margin-top:64px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.12);border-radius:20px;overflow:hidden}
 .sgrid a{background:var(--night);padding:30px 28px 28px;text-decoration:none;display:flex;flex-direction:column;min-height:300px;position:relative;transition:background .3s}
 .sgrid a::after{content:"\2192";position:absolute;right:26px;top:26px;color:var(--lime);opacity:0;transform:translateX(-8px);transition:.3s var(--ease)}
-.sgrid a:hover{background:var(--night2)}.sgrid a:hover::after{opacity:1;transform:none}
+.sgrid a:hover{background:var(--night2)}
+.card{transition:transform .4s var(--ease),box-shadow .4s}
+.card:hover{transform:translateY(-4px);box-shadow:0 1px 2px rgba(11,10,36,.04),0 40px 70px -30px rgba(42,23,238,.35)}.sgrid a:hover::after{opacity:1;transform:none}
 .sgrid small{font:500 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--lime)}
 .sgrid h3{font-size:32px;margin:16px 0 10px;line-height:1.05}
 .sgrid p{margin:0;color:#aaa8d6;font-size:15.5px}
@@ -248,12 +256,13 @@ footer{background:var(--night);color:#aaa8d6;padding:36px 0 40px;font-size:14px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:14px 36px;align-items:center;justify-content:space-between}
 footer a{text-decoration:none;color:#fff}footer a:hover{color:var(--lime)}
 footer .links{display:flex;gap:24px}
+footer .tech svg{display:inline-block;width:12px;height:12px;color:var(--lime);vertical-align:-1px}
 footer .tech{flex-basis:100%;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:#7f7db0}
 
 /* scroll reveal (progressive) */
 @supports (animation-timeline:view()){
   .rv{animation:rv linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
-  @keyframes rv{from{opacity:0;transform:translateY(34px)}}
+  @keyframes rv{from{transform:translateY(36px)}}
 }
 
 /* privacy / doc */
@@ -268,6 +277,7 @@ footer .tech{flex-basis:100%;padding-top:20px;border-top:1px solid rgba(255,255,
   .pane.side{display:none}
   .pane.side+.pane{border-left:0}
 }
+@media (max-width:1000px){.nav nav .navmail{display:none}}
 @media (max-width:860px){
   .wrap{padding:0 20px}
   .nav nav a:not(.btn){display:none}
@@ -294,7 +304,8 @@ footer .tech{flex-basis:100%;padding-top:20px;border-top:1px solid rgba(255,255,
   .hero h1{max-width:none}
   .cta-row{gap:16px}
   .btn{padding:13px 20px}
-  .win .bar .title{display:none}
+  .win .bar .title,.pw{display:none}
+  .pill{font-size:11px}
   .pane{padding:18px 16px}
   .sgrid{grid-template-columns:1fr}
   .persona{grid-template-columns:1fr}
