@@ -6,7 +6,7 @@ Static marketing site for [CloseAvatar](https://closeavatar.com/): plain HTML an
 | --- | --- |
 | `index.html` | Landing page |
 | `privacy.html` | Privacy page |
-| `styles.css`, `favicon.svg` | Styling and icon |
+| `styles.css`, `fonts/`, `favicon.svg` | Styling, self-hosted fonts (Instrument Serif, Inter Tight, JetBrains Mono; OFL) and icon |
 | `CNAME` | Custom domain for GitHub Pages (`closeavatar.com`) |
 | `robots.txt`, `sitemap.xml` | SEO basics |
 | `.github/workflows/pages.yml` | GitHub Pages deploy workflow |
