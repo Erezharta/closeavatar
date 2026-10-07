@@ -49,4 +49,4 @@ Check GitHub's [custom domain docs](https://docs.github.com/pages/configuring-a-
 
 ## Contact
 
-hello@closeavatar.com
+erez@closeavatar.com
