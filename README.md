@@ -4,7 +4,8 @@ Static marketing site for [CloseAvatar](https://closeavatar.com/): plain HTML an
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Landing page |
+| `index.html` | Landing page (with JSON-LD) |
+| `AGENTS.md`, `CLAUDE.md`, `llms.txt` | Context for AI agents: repo rules, and a machine-readable site summary |
 | `privacy.html` | Privacy page |
 | `styles.css`, `fonts/`, `favicon.svg` | Styling, self-hosted fonts (Instrument Serif, Inter Tight, JetBrains Mono; OFL) and icon |
 | `CNAME` | Custom domain for GitHub Pages (`closeavatar.com`) |

@@ -16,6 +16,14 @@
 <meta property="og:url" content="https://closeavatar.com/">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","@id":"https://closeavatar.com/#org","name":"CloseAvatar","url":"https://closeavatar.com/","email":"erez@closeavatar.com","logo":"https://closeavatar.com/favicon.svg"},
+{"@type":"WebSite","@id":"https://closeavatar.com/#site","url":"https://closeavatar.com/","name":"CloseAvatar","publisher":{"@id":"https://closeavatar.com/#org"}},
+{"@type":"WebPage","@id":"https://closeavatar.com/#page","url":"https://closeavatar.com/","name":"CloseAvatar: Rehearse the sales call before it counts","isPartOf":{"@id":"https://closeavatar.com/#site"},"about":{"@id":"https://closeavatar.com/#product"}},
+{"@type":"SoftwareApplication","@id":"https://closeavatar.com/#product","name":"CloseAvatar","applicationCategory":"BusinessApplication","description":"Practice platform where B2B sales reps rehearse discovery, objection handling and closing calls against AI buyer avatars, then get line-by-line coaching and personalised drills. Built on the Claude API by Anthropic. Early access; not generally available.","audience":{"@type":"BusinessAudience","audienceType":"B2B sales teams"},"publisher":{"@id":"https://closeavatar.com/#org"}}
+]}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -44,9 +52,9 @@
     </div>
   </div>
 
-  <div class="stage"><div class="win" role="img" aria-label="Sample practice call. A skeptical buyer avatar pushes back, the rep recovers on turn four, and a coaching panel scores the call and suggests a better opening line.">
+  <div class="stage"><div class="win" role="group" aria-label="Illustrative sample of the CloseAvatar interface: a practice call with a skeptical buyer avatar, the rep's replies, and a coaching panel.">
     <div class="bar"><div class="dots"><i></i><i></i><i></i></div><span class="title">Discovery &middot; The incumbent vendor</span><span class="rec"><b></b>LIVE PRACTICE</span><span class="pw">Powered by Claude</span></div>
-    <div class="body" aria-hidden="true">
+    <div class="body">
       <div class="pane side">
         <p class="lab">Buyer avatar</p>
         <div class="who"><div class="face">D</div><div><b>Dana Reyes</b><span>VP Operations, 400-person logistics co.</span></div></div>
@@ -58,14 +66,14 @@
         <ul class="stages"><li class="done">Opening</li><li class="now">Discovery</li><li>Objections</li><li>Next step</li></ul>
       </div>
       <div class="pane">
-        <div class="chat-head"><p class="lab">Conversation</p><div style="display:flex;align-items:center"><div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="time">04:12</span></div></div>
+        <div class="chat-head"><p class="lab">Conversation</p><div style="display:flex;align-items:center"><div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="time">04:12</span></div></div>
         <div class="convo">
           <div class="m b"><small>Dana</small>We already have a vendor for this. I&rsquo;m honestly not sure why I took the call.</div>
           <div class="m r"><span class="flag">Turn 2</span><small>You</small><span class="bad">We&rsquo;re way better than most providers</span>, and I&rsquo;d love to show you a quick demo.</div>
           <div class="m b"><small>Dana</small>Everyone says that. I&rsquo;ve sat through four demos this year.</div>
           <div class="m r"><small>You</small>Fair. <span class="good">What&rsquo;s the one thing the current setup makes harder than it should be?</span></div>
           <div class="m b"><small>Dana</small>Slow onboarding when we open a new region. Weeks, sometimes. Switching is a headache, though.</div>
-          <div class="typing"><i></i><i></i><i></i></div>
+          <div class="typing" aria-label="Dana is typing" role="img"><i></i><i></i><i></i></div>
         </div>
         <div class="composer"><span>Reply, or hold <kbd>Space</kbd> to speak&hellip;</span><div class="mic"><svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><rect x="5.5" y="1" width="5" height="9" rx="2.5"/><path d="M3 7.5a5 5 0 0010 0M8 12.5V15" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg></div></div>
       </div>

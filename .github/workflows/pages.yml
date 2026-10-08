@@ -22,7 +22,7 @@ jobs:
       - name: Assemble site
         run: |
           mkdir _site
-          cp -r fonts index.html privacy.html styles.css favicon.svg robots.txt sitemap.xml CNAME .nojekyll _site/
+          cp -r fonts llms.txt index.html privacy.html styles.css favicon.svg robots.txt sitemap.xml CNAME .nojekyll _site/
       - uses: actions/upload-pages-artifact@v3
       - id: deployment
         uses: actions/deploy-pages@v4
